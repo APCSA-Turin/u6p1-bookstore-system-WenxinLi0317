@@ -1,33 +1,38 @@
 package com.example.project;
 
-public class IdGenerate{ //This class contains statics variable and methods, you do not initalize an object to use it.
-    
-     // //requires 1 private attribute String currentId. You must initialize it to 99
-     private static int num = 99;
-     private static String currentId ;
-     // //requires one empty constructor
-     public IdGenerate()
-     {
-         currentId = "" + num;
-     }
- 
-     // public  getCurrentId(){}
-     public static String getCurrentId()
-     {
-         return currentId;
-     }
-     // public  reset(){} //must reset the currentId back to 99
-     public static void reset()
-     {
-         num = 99;
-         currentId = "" + num;
-     }
- 
-     // public generateID(){} //generates a new id, when called it will increment the currentId by 1.. Hint pay attention to data type of currentId
-     public static String generateID()
-     {
+//The IdGenerate class is responsible for generating unique IDs for users or other entities.
+
+public class IdGenerate {
+
+    // Static variable holding the current ID (starting from 99).
+    private static int num = 99;
+
+    // Static variable to store the current ID as a String.
+    private static String currentId;
+
+    //Constructor initializes the currentId to "99" when the class is first used.
+     
+    public IdGenerate() {
+        currentId = "" + num;
+    }
+
+    //return the current ID as a string.
+    public static String getCurrentId() {
+        return currentId;
+    }
+
+    // Resets the current ID back to "99".
+     
+    public static void reset() {
+        num = 99;
+        currentId = "" + num;
+    }
+
+    // Generates a new ID by incrementing the current ID and returning it as a string.
+     
+    public static String generateID() {
         num++; // Increment the number
         currentId = "" + num; // Update currentId with the new number
         return currentId;
-     }
+    }
 }
