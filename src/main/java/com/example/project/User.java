@@ -45,27 +45,29 @@ public class User{
     }
     public String bookListInfo()
     {
-        if(book == null)
-        {
-            String str = "Books: \nempty\nempty\nempty\nempty\nempty\n";
-            return str;
-        }
-        else
-        {
+       
             String str = "Books: \n";
             for (Book book: book)
             {
-                str+=book+"\n";
+                if(book == null)
+                {
+                    str += "empty\n";
+                    
+                }
+                else
+                {
+                str += book.bookInfo() +"\n";
+                }
             }
             return str;
         }
-    }
+    
      //returns a booklist for the user, if empty, output "empty"
 
      public String userInfo()
      {
         String str = "";
-        str += "Name: "+name+"\nId: "+Id+"\nBooks: \n";
+        str += "Name: "+name+"\nId: "+Id+"\n";
         str += bookListInfo();
         return str;
      } //returns  "Name: []\nID: []\nBooks:\n[]"

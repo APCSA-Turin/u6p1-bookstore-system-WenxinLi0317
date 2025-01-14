@@ -39,7 +39,7 @@ public class Book{
         this.author=author;
     }
     // public getYearPublished() {}
-    public int getYearPublicshed()
+    public int getYearPublished()
     {
         return yearPublished;
     }

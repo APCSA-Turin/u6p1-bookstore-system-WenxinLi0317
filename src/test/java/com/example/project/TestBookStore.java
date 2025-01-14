@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 public class TestBookStore {
 
-//removeUser
+//bookStoreBookInfo
     @Test
     public void testAddUser(){
         BookStore store = new BookStore(); //create a new bookstore with 6 empty books
