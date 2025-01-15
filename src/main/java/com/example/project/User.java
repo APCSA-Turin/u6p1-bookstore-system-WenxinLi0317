@@ -7,7 +7,8 @@ public class User {
 
     // User attributes: name, ID, and a list of books.
     private String name;
-    private String Id;
+    IdGenerate newID = new IdGenerate();
+    private String Id = newID.getCurrentId();
     private Book[] book = new Book[5]; // A list of up to 5 books the user owns.
 
     //Constructor initializes a user with a name and ID.
