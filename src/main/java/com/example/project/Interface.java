@@ -55,6 +55,7 @@ public class Interface
             System.out.println("Enter year published:");
             int yearPublished = scan.nextInt();
             System.out.println("Enter isbn:");
+            scan.nextLine();
             String isbn = scan.nextLine();
             System.out.println("Enter quantity:");
             int quantity = scan.nextInt();
